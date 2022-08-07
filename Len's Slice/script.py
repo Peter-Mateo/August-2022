@@ -12,3 +12,4 @@ print(num_two_dollar_slices)
 #Find the length of the toppings list 
 num_pizzas = len(toppings)
 
+print(f"We sell {num_pizzas} different kinds of pizza!")
