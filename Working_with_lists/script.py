@@ -24,5 +24,6 @@ removed_item = inventory.pop(6)
 #Add "19th Century Bed Frame" in the 11th element in inventory
 inventory.insert(12, "19th Century Bed Frame")
 
+#Sort inventory
 inventory.sort()
 print(inventory)
