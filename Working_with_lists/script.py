@@ -17,3 +17,6 @@ first_3 = inventory[:3]
 
 #How many 'twin bed' in inventory 
 twin_beds = inventory.count("twin bed")
+
+#Remove the 5th element from inventory
+removed_item = inventory.pop(6)
