@@ -26,3 +26,4 @@ priciest_pizza = pizza_and_prices[-1]
 
 pizza_and_prices.pop()
 
+pizza_and_prices.insert(4, [2.5, 'peppers'])
