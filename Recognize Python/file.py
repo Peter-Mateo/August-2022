@@ -1,40 +1,44 @@
-num1 = 42
-num2 = 2.3
-boolean = True
-string = 'Hello World'
-pizza_toppings = ['Pepperoni', 'Sausage', 'Jalepenos', 'Cheese', 'Olives']
-person = {'name': 'John', 'location': 'Salt Lake', 'age': 37, 'is_balding': False}
-fruit = ('blueberry', 'strawberry', 'banana')
-print(type(fruit))
-print(pizza_toppings[1])
-pizza_toppings.append('Mushrooms')
-print(person['name'])
-person['name'] = 'George'
-person['eye_color'] = 'blue'
-print(fruit[2])
+num1 = 42 # Integer
+num2 = 2.3 # Float
+boolean = True # Boolean
+string = 'Hello World' # String
+pizza_toppings = ['Pepperoni', 'Sausage', 'Jalepenos', 'Cheese', 'Olives'] # List Initialization
+person = {'name': 'John', 'location': 'Salt Lake', 'age': 37, 'is_balding': False} # Dictionary initialisation
+fruit = ('blueberry', 'strawberry', 'banana') # Tuple initialisation
+print(type(fruit)) # Type Check
+print(pizza_toppings[1]) # List - Access Value - 'Sausage'
+pizza_toppings.append('Mushrooms') # List - Add Value
+print(person['name']) # Dictionary - Access Value - 'John'
+person['name'] = 'George' # Dictionary - Change Value - 'George'
+person['eye_color'] = 'blue' # Dictionary - Add Value - 'eye_color': 'blue'
+print(fruit[2]) # Tuple - Access Value - 'banana'
 
-if num1 > 45:
+if num1 > 45: # if 
     print("It's greater")
-else:
+else: # else
     print("It's lower")
 
-if len(string) < 5:
+if len(string) < 5: # Length Check
     print("It's a short word!")
-elif len(string) > 15:
+elif len(string) > 15: # Length Check
     print("It's a long word!")
-else:
+else: # else
     print("Just right!")
 
-for x in range(5):
+for x in range(5): # for - Start 
     print(x)
-for x in range(2,5):
+#Stop
+for x in range(2,5): # for - Start
     print(x)
-for x in range(2,10,3):
+#Stop
+for x in range(2,10,3): # for - Increment by 3 
     print(x)
-x = 0
-while(x < 5):
+#Stop
+x = 0 # Variable declaration
+while(x < 5): # while - Start
     print(x)
     x += 1
+#Stop
 
 pizza_toppings.pop()
 pizza_toppings.pop(1)
