@@ -23,3 +23,6 @@ pizza_and_prices.sort()
 cheapest_pizza = pizza_and_prices
 
 priciest_pizza = pizza_and_prices[-1]
+
+pizza_and_prices.pop()
+
