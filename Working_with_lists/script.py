@@ -19,10 +19,10 @@ first_3 = inventory[:3]
 twin_beds = inventory.count("twin bed")
 
 #Remove the 5th element from inventory
-removed_item = inventory.pop(6)
+removed_item = inventory.pop(4)
 
 #Add "19th Century Bed Frame" in the 11th element in inventory
-inventory.insert(12, "19th Century Bed Frame")
+inventory.insert(10, "19th Century Bed Frame")
 
 #Sort inventory
 inventory.sort()
