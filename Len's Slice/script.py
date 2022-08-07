@@ -18,10 +18,13 @@ print(f"We sell {num_pizzas} different kinds of pizza!")
 #6 
 pizza_and_prices = [[2, 'pepperoni'], [6, 'pineapple'], [1, 'cheese'], [3, 'sausage'], [2, 'olives'], [7, 'anchovies'], [2, 'mushrooms']]
 
+#8
 pizza_and_prices.sort()
 
+#9
 cheapest_pizza = pizza_and_prices
 
+#10
 priciest_pizza = pizza_and_prices[-1]
 
 pizza_and_prices.pop()
@@ -29,3 +32,5 @@ pizza_and_prices.pop()
 pizza_and_prices.insert(4, [2.5, 'peppers'])
 
 three_cheapest = pizza_and_prices[:3]
+
+print(three_cheapest)
