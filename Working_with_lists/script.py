@@ -12,6 +12,8 @@ last = inventory[-1]
 #Select items from inventory starting at index 2 and up to but not including, index 6 
 inventory_2_6 = inventory[2:6]
 
-# Select the first 3 items of inventory
-first_3 = inventory[:2]
-print(first_3)
+#Select the first 3 items of inventory
+first_3 = inventory[:3]
+
+#How many 'twin bed' in inventory 
+twin_beds = inventory.count("twin bed")
