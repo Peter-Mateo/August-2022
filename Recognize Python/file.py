@@ -25,19 +25,25 @@ elif len(string) > 15: # Length Check
 else: # else
     print("Just right!")
 
-for x in range(5): # for - Start 
+for x in range(5): # for - Sequence
+    # for - Start 
     print(x)
+    #for - Increment
 #Stop
-for x in range(2,5): # for - Start
+for x in range(2,5): # for - Sequence
+    # for - Start
     print(x)
+    # for - Increment
 #Stop
-for x in range(2,10,3): # for - Increment by 3 
+for x in range(2,10,3): # for - Sequence
+    # for - Start
     print(x)
+    # for - Increment by 3 
 #Stop
 x = 0 # Variable declaration
 while(x < 5): # while - Start
     print(x)
-    x += 1
+    x += 1 # while - Increment
 #Stop
 
 pizza_toppings.pop() # List - Delete last Value
@@ -56,35 +62,35 @@ for topping in pizza_toppings: # for - Sequence
         break # for - break 
     # for - Increment
 
-def print_hello_ten_times():
+def print_hello_ten_times(): # Function
     for num in range(10):
         print('Hello')
 
-print_hello_ten_times()
+print_hello_ten_times() # Function - Call 
 
-def print_hello_x_times(x):
+def print_hello_x_times(x): # Function - Argument
     for num in range(x):
         print('Hello')
 
-print_hello_x_times(4)
+print_hello_x_times(4) # Function - Argument
 
-def print_hello_x_or_ten_times(x = 10):
+def print_hello_x_or_ten_times(x = 10): # Function - Parameter 
     for num in range(x):
         print('Hello')
 
-print_hello_x_or_ten_times()
-print_hello_x_or_ten_times(4)
+print_hello_x_or_ten_times() # Function - Call
+print_hello_x_or_ten_times(4) # Function - Argument
 
 
-"""
+""" # Multi-Line Comment
 Bonus section
 """
 
-# print(num3)
-# num3 = 72
-# fruit[0] = 'cranberry'
-# print(person['favorite_team'])
-# print(pizza_toppings[7])
-#   print(boolean)
-# fruit.append('raspberry')
-# fruit.pop(1)
+# print(num3) # Name ERROR name <num3> is not defined
+# num3 = 72 # Variable Declaration
+# fruit[0] = 'cranberry' # Type Error: 'tuple' object does not support item assignment 
+# print(person['favorite_team']) # KeyError: 'favorite_team'
+# print(pizza_toppings[7]) # IndexError: list index out of range 
+#   print(boolean) # IndentationError: unexpected indent
+# fruit.append('raspberry') # AttributeError: 'tuple' object has no attribute 'append'
+# fruit.pop(1) # AttributeError: 'tuple' object has no attribute 'pop'
