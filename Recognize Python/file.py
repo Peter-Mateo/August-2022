@@ -40,19 +40,21 @@ while(x < 5): # while - Start
     x += 1
 #Stop
 
-pizza_toppings.pop()
-pizza_toppings.pop(1)
+pizza_toppings.pop() # List - Delete last Value
+pizza_toppings.pop(1) # List - Delete 'Sausage'
 
-print(person)
-person.pop('eye_color')
-print(person)
+print(person) # Dictionary - Access Value 
+person.pop('eye_color') # Dictionary - Delete Value 
+print(person) # Dictionary - Access Value
 
-for topping in pizza_toppings:
+for topping in pizza_toppings: # for - Sequence 
+    # for - Start
     if topping == 'Pepperoni':
-        continue
+        continue # for - continue 
     print('After 1st if statement')
     if topping == 'Olives':
-        break
+        break # for - break 
+    # for - Increment
 
 def print_hello_ten_times():
     for num in range(10):
