@@ -16,5 +16,10 @@ num_pizzas = len(toppings)
 print(f"We sell {num_pizzas} different kinds of pizza!")
 
 #6 
-pizza_and_prices = [2, 'pepperoni', 6, 'pineapple', 1, 'cheese', 3, 'sausage', 2, 'olives', 7, 'anchovies', 2, 'mushrooms']
+pizza_and_prices = [[2, 'pepperoni'], [6, 'pineapple'], [1, 'cheese'], [3, 'sausage'], [2, 'olives'], [7, 'anchovies'], [2, 'mushrooms']]
 
+pizza_and_prices.sort()
+
+cheapest_pizza = pizza_and_prices
+
+priciest_pizza = pizza_and_prices[-1]
