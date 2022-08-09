@@ -11,4 +11,6 @@ print("Starting While Loop")
 #     print(" ----- ")
 # print("While Loop ended")
 
+countdown = 10
+
 
