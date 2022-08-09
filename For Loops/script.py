@@ -17,3 +17,5 @@ while countdown != 0:
 
     countdown -= 1
 
+else:
+    print("We have liftoff!")
