@@ -66,14 +66,14 @@ def number_of_days_in_a_week_silicon_or_triangle_sides(b,c):
 print(number_of_days_in_a_week_silicon_or_triangle_sides(2,3))
 print(number_of_days_in_a_week_silicon_or_triangle_sides(5,3))
 print(number_of_days_in_a_week_silicon_or_triangle_sides(2,3) + number_of_days_in_a_week_silicon_or_triangle_sides(5,3))
-
+# Prediction - (14, 7, 14)
 
 #10
 def addition(b,c):
     return b+c
     return 10
 print(addition(3,5))
-
+# Prediction - (8)
 
 #11
 b = 500
@@ -84,7 +84,7 @@ def foobar():
 print(b)
 foobar()
 print(b)
-
+# Prediction - (500, 500, 300, 500)
 
 #12
 b = 500
@@ -96,7 +96,7 @@ def foobar():
 print(b)
 foobar()
 print(b)
-
+# Prediction - (500, 500, 300, 500)
 
 #13
 b = 500
