@@ -18,3 +18,5 @@ print(sum(num))
 def summer(some_list):
     a = some_list[0] + len(some_list)
     return a
+list = [1,2,3,4,5,6]
+print(summer(list))
