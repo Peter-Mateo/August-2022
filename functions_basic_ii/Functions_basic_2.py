@@ -37,3 +37,5 @@ tapa = [1,2,3,4,5,6,10,1,3,2,1]
 false_test = [1,2]
 print(minus(tapa))
 print(minus(false_test))
+
+# Write a function that that accepts two integers as parameters: size and value. The function should create and return a list whose length is equal to the given size, and whose values are all the given value. 
