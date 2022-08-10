@@ -118,7 +118,7 @@ def foo():
 def bar():
     print(3)
 foo()
-
+# Prediction - (1, 3, 2)
 
 #15
 def foo():
