@@ -131,3 +131,4 @@ def bar():
     return 5
 y = foo()
 print(y)
+# Prediction - (1, 3, 5, 10)
