@@ -11,3 +11,5 @@ print(countdown(5))
 def sum(some_list):
     a = some_list[0] + len(some_list)
     return a
+num = [1,2,3,4,5]
+print(sum(num))
