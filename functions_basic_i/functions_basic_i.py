@@ -108,7 +108,7 @@ def foobar():
 print(b)
 b=foobar()
 print(b)
-
+# Prediction - (500, 500, 300, 300)
 
 #14
 def foo():
