@@ -6,3 +6,5 @@ def countdown(x):
         x = x - 1 
     return list
 print(countdown(5))
+
+#Create a function that takes a list and returns the sum of the first value in the list plus the list's length
