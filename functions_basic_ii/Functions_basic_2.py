@@ -1,4 +1,7 @@
 # Create a function that takes input and returns a list counting down from 1 
+from typing import List
+
+
 def countdown(x):
     list = []
     for i in range (x):
@@ -39,3 +42,9 @@ print(minus(tapa))
 print(minus(false_test))
 
 # Write a function that that accepts two integers as parameters: size and value. The function should create and return a list whose length is equal to the given size, and whose values are all the given value. 
+def two(size, value):
+    list = []
+    for i in range(size):
+        list.append(value)
+    return list
+print(two(3,5))
