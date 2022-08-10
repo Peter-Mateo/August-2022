@@ -54,7 +54,7 @@ def number_of_oceans_or_fingers_or_continents():
         return 10
     return 7
 print(number_of_oceans_or_fingers_or_continents())
-
+# Prediction - (100, 5)
 
 #9
 def number_of_days_in_a_week_silicon_or_triangle_sides(b,c):
