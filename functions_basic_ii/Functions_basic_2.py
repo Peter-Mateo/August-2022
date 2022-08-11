@@ -15,7 +15,7 @@ def sum(some_list):
     return some_list[1]
 num = [1,2]
 print(sum(num))
-
+sd
 #Create a function that accepts a list and returns the sum of the first value in the list plus the list's length
 def summer(some_list):
     a = some_list[0] + len(some_list)
