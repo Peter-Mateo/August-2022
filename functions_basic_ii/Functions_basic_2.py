@@ -4,7 +4,7 @@ from typing import List
 
 def countdown(x):
     list = []
-    for i in range (x):
+    for i in range (a):
         list.append(x)
         x = x - 1 
     return list
