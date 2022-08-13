@@ -25,4 +25,6 @@ student.get_all()
 print('-'*15)
 student1.get_all()
 print('-'*15)
+student_name = student.get_name()
+print(student_name)
 
