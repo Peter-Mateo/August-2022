@@ -16,7 +16,9 @@ num_pizzas = len(toppings)
 #print(f"We sell {num_pizzas} different kinds of pizza!")
 
 #6 
-pizza_and_prices = [[2, 'pepperoni'], [6, 'pineapple'], [1, 'cheese'], [3, 'sausage'], [2, 'olives'], [7, 'anchovies'], [2, 'mushrooms']]
+pizza_and_prices = []
+for i in range(len(toppings)):
+    pizza_and_prices.append([prices[i], toppings[i]])
 
 #8
 pizza_and_prices.sort()
@@ -39,9 +41,4 @@ three_cheapest = pizza_and_prices[:3]
 #14
 #print(three_cheapest)
 
-pizza_prices = []
-for i in range(len(toppings)):
-    add = [prices[i], toppings[i]]
-    pizza_prices.append(add)
 
-print(pizza_prices)
