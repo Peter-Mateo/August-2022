@@ -49,6 +49,6 @@ class User:
         self.account.display_info()
         return self
 
-account = User('Peter', 'empty@gmail.com')
-account.make_deposit(500)
-account.display_user_balance()
+# Allow a user to have multiple accounts; update methods so the user has to specify which account they are withdrawing or depositing to
+
+# Add a transfer_money(self,amount, other_user) method to the user class that takes an amount and a different User instance, and transfers money from the user's account into another user's account 
