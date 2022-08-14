@@ -1,9 +1,8 @@
 import random as rnd
 class BankAccount:
-    def __init__(self, int_rate, balance, account= None):
+    def __init__(self, int_rate, balance):
         self.int_rate = int_rate
         self.balance = balance
-        self.account_id = account
 
     @classmethod
     def instances(cls, int_rate, balance):
@@ -33,11 +32,12 @@ class BankAccount:
         self.balance = self.balance + round(self.balance * self.int_rate, 2)
         return self
 class User:
+
     def __init__(self,name, email, account_id):
         self.name = name
         self.email = email
-        self.account = BankAccount(int_rate = 0.02, balance = 0, account = account_id)
-
+        self.account = {}
+    def create_account(self, int_rate, )
     def make_deposit(self,amount):
         self.account.deposit(amount)
         return self
@@ -50,10 +50,6 @@ class User:
         self.account.display_info()
         return self
 
-user = User('Peter', 'empty@gmail.com', 305127)
-
-user.new_account(.02, 100, 305131)
-user.display_user_balance()
 # Allow a user to have multiple accounts; update methods so the user has to specify which account they are withdrawing or depositing to
 
 # Add a transfer_money(self,amount, other_user) method to the user class that takes an amount and a different User instance, and transfers money from the user's account into another user's account
