@@ -24,3 +24,7 @@ class User:
     def spend_points(self,amount):
         self.gold_card_points -= self.gold_card_points - amount
 
+## Test ###
+student = User('Peter', 'Mateo', 'asp@gmail.com', 21)
+
+
