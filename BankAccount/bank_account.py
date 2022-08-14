@@ -21,6 +21,8 @@ class BankAccount:
         self.balance = self.balance + round(self.balance * self.int_rate, 2)
 
 account1 = BankAccount(.03, 100)
+
+#Create a new account deposit 3 times withdraw 1 time and yield_interest
 account1.deposit(10)
 account1.deposit(10)
 account1.deposit(10)
