@@ -20,3 +20,7 @@ class BankAccount:
         self.balance = self.balance * self.int_rate
 
 account1 = BankAccount(.03, 100)
+account1.deposit(10)
+account1.deposit(10)
+account1.deposit(10)
+account1.withdraw(15)
