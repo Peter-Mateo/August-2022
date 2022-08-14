@@ -21,10 +21,6 @@ class BankAccount:
             self.balance -= amount
             return self
 
-    def display_info(self):
-        print(f"\n Balance: ${self.balance}")
-        return self
-
     def yield_interest(self):
         self.balance = self.balance + round(self.balance * self.int_rate, 2)
         return self
@@ -40,21 +36,15 @@ class User:
         return self
 # Have to specify which account to change
     def make_deposit(self,amount):
-        for key, value in self.account.items():
-            print(key, ':', value)
-        a = input("Which account do you want to deposit into?")
-        while a not in self.account:
-            print("This is not a valid account")
-            a = input("Which account do you want to deposit into?")
-            print(self.account)
-        else:
-            self.account[a] = self.account.deposit(amount)
+        a = input("Which account?")
+        self.account[a].deposit(amount)
 # Have to specify which account to change
     def make_withdraw(self, amount):
         pass
 # Have to specify which or all accounts
-    def display_user_balance(self):
+    def display_user_accounts(self):
         pass
+
 
 # Allow a user to have multiple accounts; update methods so the user has to specify which account they are withdrawing or depositing to
 
@@ -63,3 +53,4 @@ class User:
 peter = User('Peter', 'empty@gmail.com')
 peter.create_account('checkings', 400, .02)
 peter.make_deposit(100)
+
