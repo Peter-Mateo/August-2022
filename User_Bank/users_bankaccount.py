@@ -26,7 +26,7 @@ class BankAccount:
             return self
 
     def display_info(self):
-        print(f"\n Balance: ${self.balance}\n Account: {self.account_id}")
+        print(f"\n Balance: ${self.balance}")
         return self
 
     def yield_interest(self):
@@ -37,11 +37,6 @@ class User:
         self.name = name
         self.email = email
         self.account = BankAccount(int_rate = 0.02, balance = 0, account = account_id)
-
-    @classmethod 
-    def new_account(cls, int_rate = 0.02, balance = 0, account = None):
-        self.account = BankAccount(int_rate, balance, account)
-
 
     def make_deposit(self,amount):
         self.account.deposit(amount)
@@ -57,7 +52,8 @@ class User:
 
 user = User('Peter', 'empty@gmail.com', 305127)
 
-user.new_account('')
+user.new_account(.02, 100, 305131)
+user.display_user_balance()
 # Allow a user to have multiple accounts; update methods so the user has to specify which account they are withdrawing or depositing to
 
 # Add a transfer_money(self,amount, other_user) method to the user class that takes an amount and a different User instance, and transfers money from the user's account into another user's account
