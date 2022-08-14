@@ -23,11 +23,16 @@ class User:
         if self.is_rewards_member == True:
             self.is_rewards_member = True
             self.gold_card_points = 200
+            return True
         else:
             print("User already a member")
+            return False
 
     def spend_points(self,amount):
-        self.gold_card_points -= self.gold_card_points - amount
+        if self.gold_card_points < amount:
+            print("Not enough Funds")
+        else:
+            self.gold_card_points -= self.gold_card_points - amount
 
 ## Test ###
 student = User('Peter', 'Mateo', 'asp@gmail.com', 21)
