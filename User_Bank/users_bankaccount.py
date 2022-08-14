@@ -35,3 +35,20 @@ class User:
         self.name = name
         self.email = email
         self.account = BankAccount(int_rate = 0.02, balance = 0)
+
+    #Other methods
+    def make_deposit(self,amount):
+        self.account.deposit(amount)
+        return self
+
+    def make_withdraw(self, amount):
+        self.account.withdraw(amount)
+        return self
+
+    def display_user_balance(self):
+        self.account.display_info()
+        return self
+
+account = User('Peter', 'empty@gmail.com')
+account.make_deposit(500)
+account.display_user_balance()
