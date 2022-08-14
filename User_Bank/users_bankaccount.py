@@ -1,15 +1,12 @@
-import random as rnd
 class BankAccount:
-    def __init__(self, int_rate, balance):
+    def __init__(self, int_rate, balance, account_type):
         self.int_rate = int_rate
         self.balance = balance
+        self.account_type = account_type
 
     @classmethod
-    def instances(cls, int_rate, balance):
-        return cls(int_rate, balance) 
-
-    def all(self):
-        print(self.int_rate, self.balance)
+    def instances(cls, int_rate, balance, account_type):
+        return cls(int_rate, balance, account_type) 
 
     def deposit(self, amount):
         self.balance += amount
@@ -33,23 +30,36 @@ class BankAccount:
         return self
 class User:
 
-    def __init__(self,name, email, account_id):
+    def __init__(self,name, email):
         self.name = name
         self.email = email
         self.account = {}
-    def create_account(self, int_rate, )
+
+    def create_account(self, account_type, amount, interest):
+        self.account[account_type] = BankAccount(amount, interest, account_type)
+        return self
+# Have to specify which account to change
     def make_deposit(self,amount):
-        self.account.deposit(amount)
-        return self
-
+        for key, value in self.account.items():
+            print(key, ':', value)
+        a = input("Which account do you want to deposit into?")
+        while a not in self.account:
+            print("This is not a valid account")
+            a = input("Which account do you want to deposit into?")
+            print(self.account)
+        else:
+            self.account[a] = self.account.deposit(amount)
+# Have to specify which account to change
     def make_withdraw(self, amount):
-        self.account.withdraw(amount)
-        return self
-
+        pass
+# Have to specify which or all accounts
     def display_user_balance(self):
-        self.account.display_info()
-        return self
+        pass
 
 # Allow a user to have multiple accounts; update methods so the user has to specify which account they are withdrawing or depositing to
 
 # Add a transfer_money(self,amount, other_user) method to the user class that takes an amount and a different User instance, and transfers money from the user's account into another user's account
+
+peter = User('Peter', 'empty@gmail.com')
+peter.create_account('checkings', 400, .02)
+peter.make_deposit(100)
