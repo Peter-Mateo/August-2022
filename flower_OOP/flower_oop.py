@@ -62,4 +62,7 @@ print("-" * 15)
 # Adding Custom Height
 rose.custom_grow(5, 2).say_info()
 print("-" * 15)
+# Make picked True
+rose.picked().say_info()
+print("-" * 15)
 
