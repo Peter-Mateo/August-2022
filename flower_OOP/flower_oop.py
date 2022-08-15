@@ -42,20 +42,18 @@ class Flower:
             return False
         else:
             self.num_petals -= 1
+            return self
 
     def say_info(self):
         if self.been_picked == True:
             print(" Can't find flower")
+            return self
         else:
             print(self.color, self.type, self.been_picked, self.height, self.num_petals)
+            return self
 
 # Test 
 
 # Declaring the flower
 rose = Flower('Red', 'rose')
-# Adding Height 
-rose.grow().say_info()
-print("-" * 15)
-# Adding Custom Height
-rose.custom_grow(5, 2)
-rose.say_info()
+
