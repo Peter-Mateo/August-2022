@@ -24,5 +24,9 @@ class flower:
         self.been_picked = True
         return self
 
+    def planted(self, been_picked):
+        self.been_picked = False 
+        return self
+
 
 
