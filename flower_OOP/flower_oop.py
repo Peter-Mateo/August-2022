@@ -56,4 +56,6 @@ class Flower:
 
 # Declaring the flower
 rose = Flower('Red', 'rose')
-
+# Adding Height 
+rose.grow().say_info()
+print("-" * 15)
