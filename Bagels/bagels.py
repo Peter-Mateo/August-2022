@@ -19,17 +19,32 @@ if intro_answer == "yes":
             #Converting to int, after the slicing process
             result.append(int(logic_game_answer[i : i + A]))
         print(result)
-        print("What is your first guess? ")
-        print("Don't forget it has to be three digits!")
-        guess = (int(input()),int(input()),int(input()))
-        if guess == logic_game_answer:
-            print("Your Guess was Spot on!!!")
-            print("You have Won!")
-            replay = input("Would you like to play again?  ").lower()
-            if replay == "yes":
-                pass
-        else:
-            pass
+        try_counter = 0
+        while guess != result:
+            print("What is your first guess? ")
+            print("Don't forget it has to be three digits!")
+            guess = [int(input()),int(input()),int(input())]
+            print(guess)
+            if try_counter == 10:
+                break
+            elif guess == result:
+                print("Your Guess was Spot on!!!")
+                print("You have Won!")
+                replay = input("Would you like to play again?  ").lower()
+                if replay == "yes":
+                    pass
+                else:
+                    clear()
+                    quit()
+            else:
+                for i in range(len(result)):
+                    if guess[0] == result[i]:
+                        print(f"{guess[0]} ")
+                    elif guess[1] == result[i]:
+                        pass
+                    elif guess[2] == result[i]:
+                        pass
+        print("You have hit past the 10th try mark, Try again!")
 else:
     clear()
     close = input("Would you like to close the program? Yes? No?  ").lower()
