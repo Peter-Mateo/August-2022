@@ -23,7 +23,7 @@ if intro_answer == "yes":
             result.append(int(logic_game_answer[i : i + A]))
         # Prediction -
         print("What is your guess? ")
-        print("Don't forget it has to be three digits!")
+        print("Don't forget it has to be three digits! One digit at a time")
         guess = [int(input()),int(input()),int(input())]
         # Set number of chances
         try_counter = 1
