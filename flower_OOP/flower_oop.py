@@ -52,7 +52,7 @@ class Flower:
             print(self.color, self.type, self.been_picked, self.height, self.num_petals)
             return self
 
-# Test 
+# Test
 
 # Declaring the flower
 rose = Flower('Red', 'rose')
