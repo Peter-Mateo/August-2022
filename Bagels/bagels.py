@@ -28,40 +28,38 @@ if intro_answer == "yes":
         try_one = guess[0]
         try_two = guess[1]
         try_three = guess[2]
-        print(guess)
         try_counter = 1
+        list_guess = []
         for i in range(len(result)):
             if try_one == result[i]:
                 if 0 != i:
-                    print(f"{try_one} Pico")
+                    list_guess.insert(0, f"{try_one} Pico")
                 elif 0 == i:
-                    print(f"{try_one} Fermi")
-                else:
-                    attempt_1 = False
+                    list_guess.insert(0, f"{try_one} Fermi")
             elif try_two == result[i]:
                 if 1 != i:
-                    print(f"{try_two} Pico")
+                    list_guess.insert(1, f"{try_two} Pico")
                 elif 1 == i:
-                    print(f"{try_two} Fermi")
-                else:
-                    attempt_2 = False
+                    list_guess.insert(1, f"{try_two} Fermi")
             elif try_three == result[i]:
                 if 2 != i:
-                    print(f"{try_three} Pico")
+                    list_guess.insert(2, f"{try_three} Pico")
                 elif 2 == i:
-                    print(f"{try_three} Fermi")
-                else:
-                    attempt_3 = False
-        if try_one and try_two and try_three == False:
+                    list_guess.insert(2, f"{try_three} Fermi")
+        if list_guess == []:
             print(f"{guess} Bagels")
+        clear()
         while guess != result:
-            print("What is your guess? ")
+            clear()
+            print("-"* 15)
+            print(list_guess)
+            print(f"Your last Guess: {guess}")
+            print("What is your next guess? ")
             print("Don't forget it has to be three digits!")
             guess = [int(input()),int(input()),int(input())]
             try_one = guess[0]
             try_two = guess[1]
             try_three = guess[2]
-            print(guess)
             if try_counter == 11:
                 break
             elif guess == result:
@@ -74,29 +72,30 @@ if intro_answer == "yes":
                     clear()
                     quit()
             else:
+                list_guess = []
                 for i in range(len(result)):
-                    if try_one == result[i]:
-                        if 0 != i:
-                            print(f"{try_one} Pico")
-                        elif 0 == i:
-                            print(f"{try_one} Fermi")
+                    if try_three == result[i]:
+                        if 2 != i:
+                            list_guess.insert(2, f"{try_three} Pico")
+                        elif 2 == i:
+                            list_guess.insert(2, f"{try_three} Fermi")
                         else:
-                            attempt_1 = False
+                            attempt_1 = 'no'
                     elif try_two == result[i]:
                         if 1 != i:
-                            print(f"{try_two} Pico")
+                            list_guess.insert(1, f"{try_two} Pico")
                         elif 1 == i:
-                            print(f"{try_two} Fermi")
+                            list_guess.insert(1, f"{try_two} Fermi")
                         else:
-                            attempt_2 = False
-                    elif try_three == result[i]:
-                        if 2 != i:
-                            print(f"{try_three} Pico")
-                        elif 2 == i:
-                            print(f"{try_three} Fermi")
+                            attempt_2 = 'no'
+                    elif try_one == result[i]:
+                        if 0 != i:
+                            list_guess.insert(0, f"{try_one} Pico")
+                        elif 0 == i:
+                            list_guess.insert(0, f"{try_one} Fermi")
                         else:
-                            attempt_3 = False
-        if try_one and try_two and try_three == False:
+                            attempt_3 = 'no'
+        if list_guess == []:
             print(f"{guess} Bagels")
         try_counter += 1
         print("You have hit past the 10th try mark, Try again!")
