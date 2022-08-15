@@ -71,3 +71,6 @@ print("-" * 15)
 # Someone accidentally stepped on the rose
 rose.stepped_on().say_info()
 print("-" * 15)
+# We had to pluck dead pedals
+rose.plucked().say_info()
+print("-" * 15)
