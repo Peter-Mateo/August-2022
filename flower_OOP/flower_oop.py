@@ -20,5 +20,9 @@ class flower:
             self.num_petals = num_petals
             return self
 
+    def picked(self, been_picked):
+        self.been_picked = True
+        return self
+
 
 
