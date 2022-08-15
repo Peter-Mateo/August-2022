@@ -68,4 +68,6 @@ print("-" * 15)
 # Make picked False
 rose.planted().say_info()
 print("-" * 15)
-
+# Someone accidentally stepped on the rose
+rose.stepped_on().say_info()
+print("-" * 15)
