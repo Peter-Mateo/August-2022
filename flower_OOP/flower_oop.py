@@ -29,7 +29,8 @@ class flower:
         return self
 
     def stepped_on(self):
-        if (self.height -= 2) < 0:
+        new = self.height - 2
+        if new < 0:
             return False
         else:
             self.height -= 2
