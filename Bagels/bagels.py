@@ -1,14 +1,16 @@
 import os, random as rnd
 clear = lambda: os.system('cls')
-# A deductive logic Game, you must guess a secreet three- digit number based on clues. the game offers one of the following hints in response to your guess: "Pico" when your guess has a correct digit in the wrong place, "Fermi" when your guess has a correct digit in the correct place, and "Bagels" if your guess has no correct digits. You have 10 tries to guess the secret number 
 clear()
+#Intro
 print("Hello, and Welcome to Bagels! The Deductive reasoning game!!")
 intro_answer = input("Are you Ready to play? Yes? No?  ").lower()
 if intro_answer == "yes":
     clear()
     print("There are three digits that you must guess, with the given clues. You will be told when your guess has a correct digit in the correct place. You have 10 tries to guess the secret number.")
+    #Confirmation on rules
     ready_answer = input("Do you understand the rules?  ").lower()
-    if ready_answer == "yes": ## Game starts 
+    ## Game starts 
+    if ready_answer == "yes":
         clear()
         logic_game_answer = str(rnd.randint(100,999))
         # Initializing substring
@@ -19,10 +21,13 @@ if intro_answer == "yes":
             #Converting to int, after the slicing process
             result.append(int(logic_game_answer[i : i + A]))
         print(result)
+        # Prediction - 
         print("What is your guess? ")
         print("Don't forget it has to be three digits!")
         guess = [int(input()),int(input()),int(input())]
+        # Set number of chances
         try_counter = 1
+        # Declare list
         list_guess = [-1,-1,-1]
         for i in range(len(result)):
             if guess[0] == result[i]:
@@ -41,6 +46,7 @@ if intro_answer == "yes":
                 elif 2 == i:
                     list_guess[2] = (f"{guess[2]} Fermi")
         clear()
+        # Start of Loop 
         while guess != result:
             if try_counter == 11:
                 break
@@ -94,6 +100,7 @@ if intro_answer == "yes":
             try_counter += 1
         clear()
         print("You have hit past the 10th try mark, Try again!")
+# If you choose to not play game
 else:
     clear()
     close = input("To close the program, type 'close':  ").lower()
