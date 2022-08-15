@@ -28,5 +28,10 @@ class flower:
         self.been_picked = False 
         return self
 
-
+    def stepped_on(self):
+        if (self.height -= 2) < 0:
+            return False
+        else:
+            self.height -= 2
+            return self
 
