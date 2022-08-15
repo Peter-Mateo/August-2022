@@ -65,4 +65,7 @@ print("-" * 15)
 # Make picked True
 rose.picked().say_info()
 print("-" * 15)
+# Make picked False
+rose.planted().say_info()
+print("-" * 15)
 
