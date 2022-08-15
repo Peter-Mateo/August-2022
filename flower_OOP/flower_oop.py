@@ -1,4 +1,4 @@
-class flower:
+class Flower:
     def __init__(self, color, type):
         self.color = color
         self.type = type
@@ -11,13 +11,13 @@ class flower:
         self.num_petals += 2
         return self
 
-    def custom_grow(self, hieght, num_petals):
-        if hieght or num_petals < 0:
-            print("No negative values")
+    def custom_grow(self, height, num_petals):
+        if height or num_petals < 0:
+            self.height += height
+            self.num_petals += num_petals
             return self
         else:
-            self.height = hieght
-            self.num_petals = num_petals
+            print("No negative values")
             return self
 
     def picked(self):
@@ -50,3 +50,12 @@ class flower:
             print(self.color, self.type, self.been_picked, self.height, self.num_petals)
 
 # Test 
+
+# Declaring the flower
+rose = Flower('Red', 'rose')
+# Adding Height 
+rose.grow().say_info()
+print("-" * 15)
+# Adding Custom Height
+rose.custom_grow(5, 2)
+rose.say_info()
