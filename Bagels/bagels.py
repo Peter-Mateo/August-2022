@@ -7,6 +7,7 @@ intro_answer = input("Are you Ready to play? Yes? No?  ").lower()
 if intro_answer == "yes":
     clear()
     print("There are three digits that you must guess, with the given clues. You will be told when your guess has a correct digit in the correct place. You have 10 tries to guess the secret number.")
+    print("Fermi: Correct digit in correct place, Pico: Correct digit wrong place, Bagels: All digits are incorrect.")
     #Confirmation on rules
     ready_answer = input("Do you understand the rules?  ").lower()
     ## Game starts 
@@ -20,7 +21,6 @@ if intro_answer == "yes":
         for i in range(0, len(logic_game_answer), A):
             #Converting to int, after the slicing process
             result.append(int(logic_game_answer[i : i + A]))
-        print(result)
         # Prediction -
         print("What is your guess? ")
         print("Don't forget it has to be three digits!")
