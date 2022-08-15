@@ -20,11 +20,11 @@ class flower:
             self.num_petals = num_petals
             return self
 
-    def picked(self, been_picked):
+    def picked(self):
         self.been_picked = True
         return self
 
-    def planted(self, been_picked):
+    def planted(self):
         self.been_picked = False 
         return self
 
