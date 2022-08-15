@@ -30,9 +30,17 @@ class flower:
 
     def stepped_on(self):
         new = self.height - 2
-        if new < 0:
+        if new < 1:
             return False
         else:
             self.height -= 2
             return self
+
+    def plucked(self):
+        pedals = self.num_petals - 1
+        if pedals < 0:
+            return False
+        else:
+            self.num_petals -= 1
+
 
