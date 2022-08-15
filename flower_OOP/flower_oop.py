@@ -59,3 +59,7 @@ rose = Flower('Red', 'rose')
 # Adding Height 
 rose.grow().say_info()
 print("-" * 15)
+# Adding Custom Height
+rose.custom_grow(5, 2).say_info()
+print("-" * 15)
+
