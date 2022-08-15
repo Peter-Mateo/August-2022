@@ -43,4 +43,10 @@ class flower:
         else:
             self.num_petals -= 1
 
+    def say_info(self):
+        if self.been_picked == True:
+            print(" Can't find flower")
+        else:
+            print(self.color, self.type, self.been_picked, self.height, self.num_petals)
 
+# Test 
