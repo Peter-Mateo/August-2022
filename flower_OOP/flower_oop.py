@@ -11,5 +11,14 @@ class flower:
         self.num_petals += 2
         return self
 
+    def custom_grow(self, hieght, num_petals):
+        if hieght or num_petals < 0:
+            print("No negative values")
+            return self
+        else:
+            self.height = hieght
+            self.num_petals = num_petals
+            return self
+
 
 
