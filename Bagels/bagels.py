@@ -21,7 +21,7 @@ if intro_answer == "yes":
             #Converting to int, after the slicing process
             result.append(int(logic_game_answer[i : i + A]))
         print(result)
-        # Prediction - 
+        # Prediction -
         print("What is your guess? ")
         print("Don't forget it has to be three digits!")
         guess = [int(input()),int(input()),int(input())]
