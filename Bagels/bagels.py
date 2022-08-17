@@ -8,12 +8,12 @@ if intro_answer == "yes":
     clear()
     print(
     """
-    I am thinking of a 3-digit number. Try to guess what it is.
-    Here are some clues:
-    When i say:         that means:
-    Pico                One digit is correct but in the wrong position.
-    Fermi               One digit is correct and in the right position.
-    Bagels              No digit is correct. 
+I am thinking of a 3-digit number. Try to guess what it is.
+Here are some clues:
+When i say:         that means:
+Pico                One digit is correct but in the wrong position.
+Fermi               One digit is correct and in the right position.
+Bagels              No digit is correct. 
     """)
     #Confirmation on rules
     ready_answer = input("Do you understand the rules?  ").lower()
