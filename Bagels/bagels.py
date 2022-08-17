@@ -29,9 +29,11 @@ if intro_answer == "yes":
             #Converting to int, after the slicing process
             result.append(int(logic_game_answer[i : i + A]))
         # Prediction -
+        print("I have thought up a number.")
         print("What is your guess? ")
-        print("Don't forget it has to be three digits! One digit at a time")
+        print("Don't forget it has to be three digits! One digit at a time plz!")
         guess = [int(input()),int(input()),int(input())]
+        guess_count = 1 
         # Set number of chances
         try_counter = 1
         # Declare list
@@ -73,9 +75,11 @@ if intro_answer == "yes":
                         list_guess.remove(-1)
                         if list_guess == []:
                             print(f"{list_guess}")
-            print(f"Your last Guess: {guess}")
-            print("What is your next guess? ")
-            print("Don't forget it has to be three digits!")
+            print(f"""
+                    Guess number: {guess_count}
+                    Your last Guess: {guess}
+                    What is your next guess?
+                    Don't forget it has to be three digits!""")
             guess = [int(input()),int(input()),int(input())]
             if guess == result:
                 clear()
@@ -105,8 +109,11 @@ if intro_answer == "yes":
                         elif 2 == i:
                             list_guess[2] = (f"{guess[2]} Fermi")
             try_counter += 1
+            guess_count += 1
         clear()
-        print("You have hit past the 10th try mark, Try again!")
+        print(f"""
+                You have hit past the 10th try mark, Try again!
+                The correct number was {guess}""")
 # If you choose to not play game
 else:
     clear()
