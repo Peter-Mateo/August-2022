@@ -30,6 +30,8 @@ Bagels              All three digits aren't any of the numbers I was thinking of
                 sliced_first_digit = three_digit_number[:1]
                 sliced_second_digit = three_digit_number[1::3]
                 sliced_third_digit = three_digit_number[2::]
+                # Creating list to hold the answer
+                answer_list = [sliced_first_digit, sliced_second_digit, sliced_third_digit]
                 while True:
                     if guess_count != 0:
                         print(f"Guess: #{guess_count}")
@@ -42,20 +44,23 @@ What number do you think it is?
                     question_second_digit = question[1::3]
                     question_third_digit = question[2::]
                     # Creating list to hold Key Value pairs
-                    numb = []
+                    numb = [0,0,0]
                     for i in range(len(three_digit_number)):
-                        if question_first_digit == sliced_first_digit[i]:
-                            pass
-                        else:
-                            continue
-                        if question_second_digit == sliced_second_digit[i]:
-                            pass
-                        else:
-                            continue
-                        if question_third_digit == sliced_third_digit[i]:
-                            pass
-                        else:
-                            continue
+                        if question_first_digit == answer_list[i]:
+                            if 0 == answer_list[i].index:
+                                numb.insert(f"Fermi, {question_first_digit}", 0)
+                            else:
+                                numb.insert(f"Pico, {question_first_digit}", 0)
+                        if question_second_digit == answer_list[i]:
+                            if 1 == answer_list[i].index:
+                                numb.insert(f"Fermi, {question_first_digit}", 1)
+                            else:
+                                numb.insert(f"Pico, {question_first_digit}", 1)
+                        if question_third_digit == answer_list[i]:
+                            if 2 == answer_list[i].index:
+                                numb.insert(f"Fermi, {question_first_digit}", 2)
+                            else:
+                                numb.insert(f"Pico, {question_first_digit}", 2)
                     quit()
             else:
                 clear()
