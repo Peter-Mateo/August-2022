@@ -41,7 +41,11 @@ Welcome to the deductive logic game, I will think of a three digit number in whi
                     key()
                     if guess_count != 0:
                         print(f"Guess: #{guess_count}")
-                    question = input("""
+                    if guess_count > 1:
+                        print(f"""
+Last guess: {nu_number}
+""")
+                    question = input(f"""
 I am thinking of a three-digit number.
 What number do you think it is?
 """)        
@@ -51,33 +55,33 @@ What number do you think it is?
                     question_third_digit = question[2::]
                     # Creating list to hold Key Value pairs
                     numb = [99,99,99]
-                    num = [0,0,0]
+                    nu_number = [0,0,0]
                     for i in range(len(three_digit_number)):
                         if int(question_first_digit) == answer_list[i]:
                             if 0 == answer_list.index(answer_list[i]):
                                 numb.insert(0, f"Fermi, {question_first_digit}")
-                                num.insert(0, int(question_first_digit))
+                                nu_number.insert(0, int(question_first_digit))
                             else:
                                 numb.insert(0, f"Pico, {question_first_digit}")
                         if int(question_second_digit) == answer_list[i]:
                             if 1 == answer_list.index(answer_list[i]):
                                 numb.insert(1, f"Fermi, {question_second_digit}")
-                                num.insert(1, int(question_second_digit))
+                                nu_number.insert(1, int(question_second_digit))
                             else:
                                 numb.insert(1, f"Pico, {question_second_digit}")
                         if int(question_third_digit) == answer_list[i]:
                             if 2 == answer_list.index(answer_list[i]):
                                 numb.insert(2, f"Fermi, {question_third_digit}")
-                                num.insert(2, int(question_third_digit))
+                                nu_number.insert(2, int(question_third_digit))
                             else:
                                 numb.insert(2, f"Pico, {question_third_digit}")
                     # Gets rid of any integers that aren't apart of the orginal answer (Contingency)
                     for i in range(len(numb)):
                         if 99 in numb:
                             numb.remove(99)
-                        if 0 in num:
-                            num.remove(0)
-                    if answer_list == num:
+                        if 0 in nu_number:
+                            nu_number.remove(0)
+                    if answer_list == nu_number:
                         clear()
                         print(f"""
 You have won the game!
@@ -91,7 +95,7 @@ It took you {guess_count} to get it correct.
                         clear()
                         pass
                     print(numb)
-                    print(num)
+                    print(nu_number)
                     print(answer_list)
             else:
                 clear()
