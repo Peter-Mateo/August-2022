@@ -1,5 +1,14 @@
 import os, random as rnd
 clear = lambda: os.system('cls')
+def key():
+    print("""
+The game offers one of the follwing hints in response to your guess: 
+When I say:         that means:
+Pico                Guess is the correct digit but in the wrong place
+Fermi               Correct digit in the correct place
+Bagels              All three digits aren't any of the numbers I was thinking of    
+    """)
+    return key()
 # Start of the program
 while True:
     clear()
@@ -12,15 +21,9 @@ Welcome to the deductive logic game, I will think of a three digit number in whi
         clear()
         while True:
             # Key to the game
-            print("""
-The game offers one of the follwing hints in response to your guess: 
-When I say:         that means:
-Pico                Guess is the correct digit but in the wrong place
-Fermi               Correct digit in the correct place
-Bagels              All three digits aren't any of the numbers I was thinking of    
-    """)
+            key()
             # Understanding of the rules
-            understand_rules = input("Do you understand these rules? We will also leave the key at the top of the screen in case you forget them!").lower()
+            understand_rules = input("Do you understand these rules? We will also leave the key at the top of the screen in case you forget them!   ").lower()
             if understand_rules == 'yes':
                 # Start of the program - Creates 3 digit number
                 three_digit_number = str(rnd.randint(100,999))
@@ -34,6 +37,7 @@ Bagels              All three digits aren't any of the numbers I was thinking of
                 answer_list = [int(sliced_first_digit), int(sliced_second_digit), int(sliced_third_digit)]
                 while True:
                     print(answer_list)
+                    key()
                     if guess_count != 0:
                         print(f"Guess: #{guess_count}")
                     question = input("""
