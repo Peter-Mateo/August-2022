@@ -1,5 +1,6 @@
 import os, random as rnd
 clear = lambda: os.system('cls')
+# Start of the program
 while True:
     clear()
     print("""
@@ -18,7 +19,14 @@ Bagels              All three digits aren't any of the numbers I was thinking of
     """)
             understand_rules = input("Do you understand these rules? We will also leave the key at the top of the screen in case you forget them!").lower()
             if understand_rules == 'yes':
-                break
+                print("""
+I am thinking of a three-digit number
+What is your first guess?
+""")
+                while True:
+                    three_digit_number = rnd.randint(100,999)
+                    print(three_digit_number)
+                    quit()
             else:
                 clear()
                 close = input("If you would like to close the game, you can by typing 'close' ").lower()
