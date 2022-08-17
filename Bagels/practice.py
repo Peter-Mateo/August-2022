@@ -22,22 +22,26 @@ Bagels              All three digits aren't any of the numbers I was thinking of
             # Understanding of the rules
             understand_rules = input("Do you understand these rules? We will also leave the key at the top of the screen in case you forget them!").lower()
             if understand_rules == 'yes':
-                print("""
+                # Start of the program - Creates 3 digit number
+                three_digit_number = str(rnd.randint(100,999))
+                # Game count
+                guess_count = 0
+                # Slicing integers 
+                sliced_first_digit = three_digit_number[:1]
+                sliced_second_digit = three_digit_number[1::3]
+                sliced_third_digit = three_digit_number[2::]
+                while True:
+                    if guess_count != 0:
+                        print(f"{guess_count}")
+                    question = input("""
 I am thinking of a three-digit number
 What is your first guess?
-""")    
-                # Game count
-                guess_count = 1
-                # Start of the program - Creates 3 digit number
-                while True:
-                    
-                    three_digit_number = str(rnd.randint(100,999))
-                    # Slicing the integers 
-                    sliced_first_digit = three_digit_number[:1]
-                    sliced_second_digit = three_digit_number[1::3]
-                    sliced_third_digit = three_digit_number[2::]
-                    
-                    
+""")        
+                    # Slicing integers
+                    question_first_digit = question[:1]
+                    question_second_digit = question[1::3]
+                    question_third_digit = question[2::]
+
                     quit()
             else:
                 clear()
