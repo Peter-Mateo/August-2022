@@ -45,7 +45,7 @@ What number do you think it is?
                     question_second_digit = question[1::3]
                     question_third_digit = question[2::]
                     # Creating list to hold Key Value pairs
-                    numb = [0,0,0]
+                    numb = [99,99,99]
                     for i in range(len(three_digit_number)):
                         if int(question_first_digit) == answer_list[i]:
                             if 0 == answer_list.index(answer_list[i]):
@@ -54,14 +54,21 @@ What number do you think it is?
                                 numb.insert(0, f"Pico, {question_first_digit}")
                         if int(question_second_digit) == answer_list[i]:
                             if 1 == answer_list.index(answer_list[i]):
-                                numb.insert(1, f"Fermi, {question_first_digit}")
+                                numb.insert(1, f"Fermi, {question_second_digit}")
                             else:
-                                numb.insert(1, f"Pico, {question_first_digit}")
+                                numb.insert(1, f"Pico, {question_second_digit}")
                         if int(question_third_digit) == answer_list[i]:
                             if 2 == answer_list.index(answer_list[i]):
-                                numb.insert(2, f"Fermi, {question_first_digit}")
+                                numb.insert(2, f"Fermi, {question_third_digit}")
                             else:
-                                numb.insert(2, f"Pico, {question_first_digit}")
+                                numb.insert(2, f"Pico, {question_third_digit}")
+                    for i in range(len(numb)):
+                        if 99 in numb:
+                            numb.remove(99)
+                    # Exits the loop once the question count has surpassed 10
+                    if guess_count == 10:
+                        clear()
+                        pass
                     print(numb)
                     print(answer_list)
                     quit()
