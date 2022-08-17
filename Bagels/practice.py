@@ -26,3 +26,8 @@ Bagels              All three digits aren't any of the numbers I was thinking of
                 quit()
             else:
                 continue
+else:
+    clear()
+    close = input("If you would like to close the game, you can by typing 'close' ").lower()
+    if close == 'close':
+        quit()
