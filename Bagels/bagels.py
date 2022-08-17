@@ -28,7 +28,7 @@ Bagels              No digit is correct.
         for i in range(0, len(logic_game_answer), A):
             #Converting to int, after the slicing process
             result.append(int(logic_game_answer[i : i + A]))
-        # Prediction -
+        # Prediction
         print("""
 I have thought up a number.")
 What is your guess? ")
