@@ -73,7 +73,12 @@ What number do you think it is?
                         if 0 in num:
                             num.remove(0)
                     if answer_list == num:
-                        print("You have won the game!")
+                        clear()
+                        print(f"""
+You have won the game!
+The number I thought of was {three_digit_number}
+It took you {guess_count} to get it correct.
+""")
                         quit()
                     # Exits the loop once the question count has surpassed 10
                     if guess_count == 10:
@@ -82,7 +87,6 @@ What number do you think it is?
                     print(numb)
                     print(num)
                     print(answer_list)
-                    
             else:
                 clear()
                 close = input("If you would like to close the game, you can by typing 'close' ").lower()
