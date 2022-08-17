@@ -41,6 +41,8 @@ What number do you think it is?
                     question_first_digit = question[:1]
                     question_second_digit = question[1::3]
                     question_third_digit = question[2::]
+                    # Creating list to hold Key Value pairs
+                    numb = []
                     for i in range(len(three_digit_number)):
                         if question_first_digit == sliced_first_digit[i]:
                             pass
