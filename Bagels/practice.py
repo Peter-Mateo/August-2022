@@ -32,16 +32,28 @@ Bagels              All three digits aren't any of the numbers I was thinking of
                 sliced_third_digit = three_digit_number[2::]
                 while True:
                     if guess_count != 0:
-                        print(f"{guess_count}")
+                        print(f"Guess: #{guess_count}")
                     question = input("""
-I am thinking of a three-digit number
-What is your first guess?
+I am thinking of a three-digit number.
+What number do you think it is?
 """)        
                     # Slicing integers
                     question_first_digit = question[:1]
                     question_second_digit = question[1::3]
                     question_third_digit = question[2::]
-
+                    for i in range(len(three_digit_number)):
+                        if question_first_digit == sliced_first_digit[i]:
+                            pass
+                        else:
+                            continue
+                        if question_second_digit == sliced_second_digit[i]:
+                            pass
+                        else:
+                            continue
+                        if question_third_digit == sliced_third_digit[i]:
+                            pass
+                        else:
+                            continue
                     quit()
             else:
                 clear()
