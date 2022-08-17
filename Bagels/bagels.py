@@ -115,7 +115,7 @@ Don't forget it has to be three digits!
             guess_count += 1
         clear()
         print(f"""
-                You have hit past the 10th try mark, Try again!
+                You  have hit past the 10th try mark, Try again!
                 The correct number was {result}""")
 # If you choose to not play game
 else:
