@@ -6,8 +6,15 @@ print("Hello, and Welcome to Bagels! The Deductive reasoning game!!")
 intro_answer = input("Are you Ready to play? Yes? No?  ").lower()
 if intro_answer == "yes":
     clear()
-    print("There are three digits that you must guess, with the given clues. You will be told when your guess has a correct digit in the correct place. You have 10 tries to guess the secret number.")
-    print("Fermi: Correct digit in correct place, Pico: Correct digit wrong place, Bagels: All digits are incorrect.")
+    print(
+    """
+    I am thinking of a 3-digit number. Try to guess what it is.
+    Here are some clues:
+    When i say:         that means:
+    Pico                One digit is correct but in the wrong position.
+    Fermi               One digit is correct and in the right position.
+    Bagels              No digit is correct. 
+    """)
     #Confirmation on rules
     ready_answer = input("Do you understand the rules?  ").lower()
     ## Game starts 
