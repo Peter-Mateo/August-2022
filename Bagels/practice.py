@@ -59,7 +59,7 @@ What number do you think it is?
                     for i in range(len(three_digit_number)):
                         if int(question_first_digit) == answer_list[i]:
                             if 0 == answer_list.index(answer_list[i]):
-                                if 99 not in numb[0]:
+                                if 99 in answer_list.index(answer_list[i]):
                                     numb.insert(0, f"Fermi, {question_first_digit}")
                                     nu_number.insert(0, int(question_first_digit))
                                 else:
@@ -68,7 +68,7 @@ What number do you think it is?
                                 numb.insert(0, f"Pico, {question_first_digit}")
                         if int(question_second_digit) == answer_list[i]:
                             if 1 == answer_list.index(answer_list[i]):
-                                if 99 not in numb[1]:
+                                if 99 in answer_list.index(answer_list[i]):
                                     numb.insert(1, f"Fermi, {question_second_digit}")
                                     nu_number.insert(1, int(question_second_digit))
                                 else:
@@ -77,7 +77,7 @@ What number do you think it is?
                                 numb.insert(1, f"Pico, {question_second_digit}")
                         if int(question_third_digit) == answer_list[i]:
                             if 2 == answer_list.index(answer_list[i]):
-                                if 99 not in numb[2]:
+                                if 99 in answer_list.index(answer_list[i]):
                                     numb.insert(2, f"Fermi, {question_third_digit}")
                                     nu_number.insert(2, int(question_third_digit))
                                 else:
