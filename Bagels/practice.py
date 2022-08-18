@@ -59,20 +59,29 @@ What number do you think it is?
                     for i in range(len(three_digit_number)):
                         if int(question_first_digit) == answer_list[i]:
                             if 0 == answer_list.index(answer_list[i]):
-                                numb.insert(0, f"Fermi, {question_first_digit}")
-                                nu_number.insert(0, int(question_first_digit))
+                                if 99 not in numb[0]:
+                                    numb.insert(0, f"Fermi, {question_first_digit}")
+                                    nu_number.insert(0, int(question_first_digit))
+                                else:
+                                    continue
                             else:
                                 numb.insert(0, f"Pico, {question_first_digit}")
                         if int(question_second_digit) == answer_list[i]:
                             if 1 == answer_list.index(answer_list[i]):
-                                numb.insert(1, f"Fermi, {question_second_digit}")
-                                nu_number.insert(1, int(question_second_digit))
+                                if 99 not in numb[1]:
+                                    numb.insert(1, f"Fermi, {question_second_digit}")
+                                    nu_number.insert(1, int(question_second_digit))
+                                else:
+                                    continue
                             else:
                                 numb.insert(1, f"Pico, {question_second_digit}")
                         if int(question_third_digit) == answer_list[i]:
                             if 2 == answer_list.index(answer_list[i]):
-                                numb.insert(2, f"Fermi, {question_third_digit}")
-                                nu_number.insert(2, int(question_third_digit))
+                                if 99 not in numb[2]:
+                                    numb.insert(2, f"Fermi, {question_third_digit}")
+                                    nu_number.insert(2, int(question_third_digit))
+                                else:
+                                    continue
                             else:
                                 numb.insert(2, f"Pico, {question_third_digit}")
                     # Gets rid of any integers that aren't apart of the orginal answer (Contingency)
@@ -97,6 +106,7 @@ It took you {guess_count} to get it correct.
                     print(numb)
                     print(nu_number)
                     print(answer_list)
+                    quit()
             else:
                 clear()
                 close = input("If you would like to close the game, you can by typing 'close' ").lower()
