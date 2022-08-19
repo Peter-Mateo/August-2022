@@ -14,3 +14,4 @@ for (var i = 100; i > 0; i--){
 for (var i = 4; i > -4; i -= 1.5){
     console.log(i)
 }
+// Sigma
