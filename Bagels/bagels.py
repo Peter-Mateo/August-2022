@@ -7,7 +7,7 @@ intro_answer = input("Are you Ready to play? Yes? No?  ").lower()
 if intro_answer == "yes":
     clear()
     print(
-    """   
+    """    
 I am thinking of a 3-digit number. Try to guess what it is.
 Here are some clues:
 When i say:         that means:
