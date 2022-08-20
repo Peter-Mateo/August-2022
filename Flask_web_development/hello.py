@@ -9,7 +9,7 @@ def index():
 
 @app.route('/new/<name>')
 def new(name):
-    return redirect('/')
+    return redirect('localhost:5000')
 
 if __name__ == '__main__':
     app.run(debug=True)
