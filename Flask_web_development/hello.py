@@ -1,4 +1,4 @@
-from flask import Flask, make_response
+from flask import Flask, make_response, redirect
 app = Flask(__name__)
 
 @app.route('/')
@@ -9,7 +9,7 @@ def index():
 
 @app.route('/new/<name>')
 def new(name):
-    return f'<h1>Hello {name}</h1>'
+    return redirect('/')
 
 if __name__ == '__main__':
     app.run(debug=True)
