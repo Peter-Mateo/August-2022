@@ -1,15 +1,16 @@
-from flask import Flask, url_for
+from flask import Flask, render_template
 app = Flask(__name__)
 
 # View function
 @app.route('/')
 def index():
-    return 'index'
+    return render_template('index.html')
 
 # View function
-@app.route('/login')
-def login():
-    return 'login'
+@app.route('/hello/')
+@app.route('/hello/<name>')
+def hello(name = None):
+    return render_template('hello.html', name="Peter")
 
 # View function
 @app.route('/user/<username>')
