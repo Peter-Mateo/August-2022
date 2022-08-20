@@ -4,11 +4,11 @@ app = Flask(__name__)
 # View function
 @app.route('/')
 def index():
-    return 'Index page'
+    return 'index'
 
 # View function
-@app.route('/login/')
-def hello():
+@app.route('/login')
+def login():
     return 'login'
 
 # View function
@@ -16,8 +16,3 @@ def hello():
 def profile(username):
     return f'{username}\'s profile'
 
-with app.test_request_context():
-    print(url_for('index'))
-    print(url_for('login'))
-    print(url_for('login', next = '/'))
-    print(url_for('profile', next = '/'))
