@@ -7,6 +7,6 @@ def index():
     return 'Index page'
 
 # View function
-@app.route('/hello')
+@app.route('/hello/')
 def hello():
     return 'Hello, World'
