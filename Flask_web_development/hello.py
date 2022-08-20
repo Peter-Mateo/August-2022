@@ -1,15 +1,13 @@
-from flask import Flask, make_response, redirect
+from flask import Flask, make_response, redirect, render_template
 app = Flask(__name__)
 
 @app.route('/')
 def index():
-    response = make_response('<h1>This document carries a cookie!</h1>')
-    response.set_cookie('answer', '42')
-    return response
+    return render_template('index.html')
 
-@app.route('/new/<name>')
+@app.route('/user/<name>')
 def new(name):
-    return redirect('localhost:5000')
+    return render_template('user.html', name = name)
 
 if __name__ == '__main__':
     app.run(debug=True)
