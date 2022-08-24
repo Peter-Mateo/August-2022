@@ -6,3 +6,5 @@ class User(object):
         self.email = email
         self.password = password
 
+    def get_name(self):
+        return self.first_name, self.last_name
