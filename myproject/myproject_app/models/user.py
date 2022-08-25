@@ -7,4 +7,6 @@ class User(object):
         self.password = password
 
     def get_name(self):
-        return self.first_name, self.last_name
+        return self.first_name
+
+user = User('Peter', 'Mateo', 'lsdfj', 'sdfs')
