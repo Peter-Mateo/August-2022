@@ -23,14 +23,12 @@
     </style>
 </head>
 <body>
-    <h1 class = 'header'>Welcome!</h1>
+    <h1 class = 'header'>Welcome! {{times}}</h1>
     <div class = 'container'>
-        <div class="box">
-        </div>
-        <div class="box">
-        </div>
-        <div class="box">
-        </div>
+        {% for time in range(times)%}
+            <div class="box">
+            </div>
+        {% endfor %}
     </div>
 </body>
 </html>
